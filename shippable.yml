@@ -1,0 +1,29 @@
+language: node_js
+
+node_js:
+  - 6
+
+env:
+  global:
+    - secure: 0JB3TGCaz2d+cQhlg0qiqA+FYyxVNQb61RztJSfl4uY5Rvc8l4LYFi1o2gO2zTGwCVjudTP/Aq4ufQ+2nuY+wtp9ObKS7VSyRbzCqTXECvSS6T0yyNmrRiQCvN3I1V/CgHcgrs0HkdzvHqwpJdFFPgJCB8CknXNjbEgAzh6UJDZC6Vh8ZZ09Tl79aORaHswnSMs/ohUt/BTS73Dqcf6xlmEbqYU6tNVfUnCbuWB5TgIAwlyQkLF0I20aMKci2L/OFI59kjpzNkwR86z5GQHt4wYN4lr3Y1RmbfWLkNIGJXeNTdUOQiv38ocCQMl8wxGQ07e7vzrCr3XYOwdVZDamig==
+    - AWS_DEFAULT_REGION=us-east-1
+
+build:
+  ci:
+    - npm install
+    - npm run build-dist
+
+  on_success:
+    - echo "if [ \"$PULL_REQUEST\" = \"false\" ]; then" >> s3.sh
+    - echo " aws s3 cp dist s3://tractr-web-ui/master --recursive" >> s3.sh
+    - echo "else" >> s3.sh
+    - echo " aws s3 cp dist s3://tractr-web-ui/prs/$PULL_REQUEST --recursive" >> s3.sh
+    - echo " aws s3 cp dist s3://tractr-web-ui/builds/$BUILD_NUMBER --recursive" >> s3.sh
+    - echo " aws s3 cp dist s3://tractr-web-ui/latest --recursive" >> s3.sh
+    - echo "fi" >> s3.sh
+    - chmod +x s3.sh
+    - ./s3.sh
+
+branches:
+  only:
+    - master

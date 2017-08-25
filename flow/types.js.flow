@@ -1,0 +1,36 @@
+/* @flow */
+
+declare type ActionsType = {
+  // API interaction
+  accountsFetchRequest: any;
+  accountsFetchSuccess: any;
+  accountTokenFetchRequest: any;
+  accountTokenFetchSuccess: any;
+
+  // Account
+  accountAvatarUriChanged: any;
+  addPaymentMethodEvent: any;
+  addPaymentMethodStripeAccountEvent: any;
+  processPaymentMethodEvent: any;
+  removePaymentMethodEvent: any;
+  removePaymentMethodStripeAccountEvent: any;
+  updateAccountsEvent: any;
+}
+
+declare type SagaDefType = {
+  actionType: string;
+  anonymousUser?: boolean;
+  effect?: function;
+  onFail?: function;
+  statePreChecks?: Array<Object>;
+  work: function;
+}
+
+declare type TestUtilsType = {
+  reduceActionsForTypes: function;
+  sagaFactory: function;
+}
+
+declare type DOM = {
+  querySelectorAll: function;
+}

@@ -1,0 +1,34 @@
+{
+  "baseUrl": {
+    "app.tractr.io": {
+      "aws": "https://real.domain.com",
+      "jsonServer": "https://real.domain.com",
+      "port": 443,
+      "clientId": "af4c4ab9-9abf-433a-b579-e33c6d089c29"
+    },
+    "app.tractorfin.com": {
+      "aws": "https://real.domain.com",
+      "jsonServer": "https://real.domain.com",
+      "port": 443,
+      "clientId": "af4c4ab9-9abf-433a-b579-e33c6d089c29"
+    },
+    "tractr-web-ui.s3.amazonaws.com": {
+      "aws": "http://test.domain.com",
+      "jsonServer": "http://52.60.176.138",
+      "port": 80,
+      "clientId": "af4c4ab9-9abf-433a-b579-e33c6d089c29"
+    },
+    "localhost": {
+      "aws": "http://localhost",
+      "jsonServer": "http://52.60.176.138",
+      "port": 80,
+      "clientId": "af4c4ab9-9abf-433a-b579-e33c6d089c29"
+    },
+    "test": {
+      "aws": "http://localhost",
+      "jsonServer": "http://localhost",
+      "port": 80,
+      "clientId": null
+    }
+  }
+}

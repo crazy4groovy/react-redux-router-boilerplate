@@ -1,0 +1,18 @@
+#progress-bar {
+  border: 1px solid lightblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  animation: progress-bar-grow 10s 0s infinite alternate backwards;
+}
+
+#progress-bar.fade {
+  opacity: 0;
+}
+
+@keyframes progress-bar-grow {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}

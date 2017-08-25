@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique Identifier of the domain."
+    },
+    "name": {
+      "type": "string",
+      "description": "A name which represents this account."
+    },
+    "avatar": {
+      "type": "string",
+      "description": "Url to a profile pic for the consumer."
+    },
+    "isConsumer": {
+      "type": "boolean",
+      "description": "If this account can be a consumer (buyer).",
+      "default": true
+    },
+    "isMerchant": {
+      "type": "boolean",
+      "description": "If this account can be a merchant and make offers.",
+      "default": false
+    },
+    "operators": {
+      "type": "array",
+      "description": "List of Users who can manage this consumer"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {}
+    },
+    "_links": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "_links"
+  ]
+}

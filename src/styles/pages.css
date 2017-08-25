@@ -1,0 +1,13 @@
+.page-menu img.logo {
+  animation: App-logo-spin infinite 120s linear;
+  height: 3em;
+}
+
+.page {
+  margin: 2em;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

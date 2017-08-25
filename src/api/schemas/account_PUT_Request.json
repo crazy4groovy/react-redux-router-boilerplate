@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "A name which represents this account."
+    },
+    "avatarUri": {
+      "type": "string",
+      "description": "Url to a profile pic for the consumer."
+    },
+    "operators": {
+      "type": "array",
+      "description": "List of Users who can manage this consumer"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  "required": [
+    "name",
+    "operators"
+  ]
+}

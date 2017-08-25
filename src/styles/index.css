@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/** App **/
+
+#app {
+  padding: 1em;
+  border-radius: 5px;
+  min-height: 100vh;
+
+  background: #fefcea;
+  background: linear-gradient(to bottom, #fefcea 0%, #efebce 100%);
+  /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#efebce', GradientType=0);
+}
+
+
+/** BS overrides ***/
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: #cce;
+  color: #fafafa;
+}
