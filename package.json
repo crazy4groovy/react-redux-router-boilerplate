@@ -4,7 +4,7 @@
     "private": true,
     "dependencies": {
         "ajv": "4.11.3",
-        "axios": "0.16.2",
+        "axios": "0.21.1",
         "bootbox": "4.4.0",
         "classnames": "2.2.5",
         "i18next": "8.4.2",
